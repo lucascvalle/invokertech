@@ -18,7 +18,7 @@ export const HeroSection = () => {
   }, []);
 
   const logoTransform = isScrolled 
-    ? 'translate(-50%, -50%) scale(0.4) translate(-200px, -200px)' 
+    ? 'translate(0, 0) scale(0.4) translate(-100px, -100px)' 
     : 'translate(-50%, -50%) scale(1)';
 
   return (
