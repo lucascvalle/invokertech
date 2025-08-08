@@ -36,17 +36,17 @@ export const HeroSection = () => {
             variant={language === 'BR' ? 'default' : 'outline'}
             size="sm"
             onClick={() => setLanguage('BR')}
-            className="w-12 h-10 p-0 font-bold"
+            className="w-12 h-10 p-0 text-2xl"
           >
-            BR
+            🇧🇷
           </Button>
           <Button
             variant={language === 'GB' ? 'default' : 'outline'}
             size="sm"
             onClick={() => setLanguage('GB')}
-            className="w-12 h-10 p-0 font-bold"
+            className="w-12 h-10 p-0 text-2xl"
           >
-            GB
+            🇬🇧
           </Button>
         </div>
       </div>
@@ -96,11 +96,18 @@ export const HeroSection = () => {
           animationDelay: '0.3s'
         }}>
             <p className="text-2xl md:text-3xl text-quas font-medium">
-              Trazendo uma nova era de tecnologia
+              {language === 'BR' ? 'Trazendo uma nova era de tecnologia' : 'Bringing a new age of technology'}
             </p>
-            <p className="text-xl md:text-2xl text-muted-foreground">
-              Bringing a new age of technology
-            </p>
+            {language === 'BR' && (
+              <p className="text-xl md:text-2xl text-muted-foreground">
+                Bringing a new age of technology
+              </p>
+            )}
+            {language === 'GB' && (
+              <p className="text-xl md:text-2xl text-muted-foreground">
+                Trazendo uma nova era de tecnologia
+              </p>
+            )}
           </div>
 
           {/* CTA Button */}
@@ -112,9 +119,9 @@ export const HeroSection = () => {
             contactSection?.scrollIntoView({
               behavior: 'smooth'
             });
-          }}>
-              Fale Conosco / Contact Us
-            </Button>
+           }}>
+             {language === 'BR' ? 'Fale Conosco' : 'Contact Us'}
+           </Button>
           </div>
         </div>
 
