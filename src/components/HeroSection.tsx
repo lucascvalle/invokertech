@@ -33,7 +33,7 @@ export const HeroSection = () => {
       <div className={`fixed top-8 right-8 z-50 transition-all duration-500 ${isScrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
         <div className="flex gap-3">
           <Button
-            variant={language === 'BS' ? 'default' : 'outline'}
+            variant={language === 'BR' ? 'default' : 'outline'}
             size="sm"
             onClick={() => setLanguage('BR')}
             className="w-12 h-10 p-0 text-2xl"
