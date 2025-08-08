@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import invokerLogo from '@/assets/invoker-logo.png';
+import invokerLogo from '/lovable-uploads/c49f4370-49e4-46ff-8d59-13be0f72224a.png';
 
 export const HeroSection = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -18,7 +18,7 @@ export const HeroSection = () => {
   }, []);
 
   const logoTransform = isScrolled 
-    ? 'translate(0, 0) scale(0.4) translate(-100px, -100px)' 
+    ? 'scale(0.4) translate(-800px, -400px)' 
     : 'translate(-50%, -50%) scale(1)';
 
   return (
@@ -32,12 +32,12 @@ export const HeroSection = () => {
 
       {/* Main Logo */}
       <div 
-        className={`fixed top-1/2 left-1/2 z-50 transition-all duration-700 ease-out ${
+        className={`${isScrolled ? 'fixed top-8 left-8' : 'fixed top-1/2 left-1/2'} z-50 transition-all duration-700 ease-out ${
           isScrolled ? 'cursor-pointer' : ''
         }`}
         style={{
           transform: logoTransform,
-          transformOrigin: 'center center'
+          transformOrigin: isScrolled ? 'top left' : 'center center'
         }}
         onClick={isScrolled ? () => window.scrollTo({ top: 0, behavior: 'smooth' }) : undefined}
       >
