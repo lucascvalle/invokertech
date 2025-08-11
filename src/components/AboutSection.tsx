@@ -1,64 +1,55 @@
+import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import lucasToken from '@/assets/lucas-token.png';
 import pedroToken from '@/assets/pedro-token.png';
-import { Sparkles, Target, Users } from 'lucide-react';
-
-const aboutCards = [
-  {
-    id: 'origem',
-    title: 'Origem / Origin',
-    icon: Sparkles,
-    content: {
-      pt: 'Nascemos da paixão por tecnologia e inovação, unidos pela visão de transformar ideias em soluções digitais poderosas.',
-      en: 'Born from passion for technology and innovation, united by the vision of transforming ideas into powerful digital solutions.'
-    },
-    gradient: 'bg-gradient-quas'
-  },
-  {
-    id: 'missao',
-    title: 'Missão / Mission', 
-    icon: Target,
-    content: {
-      pt: 'Desenvolver soluções tecnológicas sob medida que impulsionem o crescimento dos nossos clientes através de inovação e excelência técnica.',
-      en: 'Develop custom technological solutions that drive our clients\' growth through innovation and technical excellence.'
-    },
-    gradient: 'bg-gradient-wex'
-  }
-];
-
-const teamMembers = [
-  {
-    name: 'Lucas Araújo',
-    token: lucasToken,
-    description: {
-      pt: 'Desenvolvedor Full-Stack especializado em soluções web modernas e arquiteturas escaláveis.',
-      en: 'Full-Stack Developer specialized in modern web solutions and scalable architectures.'
-    },
-    stacks: ['React', 'Node.js', 'Python', 'TypeScript', 'AWS'],
-    gradient: 'bg-gradient-quas'
-  },
-  {
-    name: 'Pedro Felipe Rolim',
-    token: pedroToken,
-    description: {
-      pt: 'Especialista em Backend e IA, focado em automação e soluções inteligentes para empresas.',
-      en: 'Backend and AI Specialist, focused on automation and intelligent solutions for businesses.'
-    },
-    stacks: ['Django', 'Spring Boot', 'Machine Learning', 'Java', 'Python'],
-    gradient: 'bg-gradient-exort'
-  }
-];
+import { Sparkles, Target } from 'lucide-react';
 
 export const AboutSection = () => {
+  const { t } = useTranslation();
+
+  const aboutCards = [
+    {
+      id: 'origem',
+      titleKey: 'about.originTitle',
+      contentKey: 'about.originContent',
+      icon: Sparkles,
+      gradient: 'bg-gradient-quas'
+    },
+    {
+      id: 'missao',
+      titleKey: 'about.missionTitle',
+      contentKey: 'about.missionContent',
+      icon: Target,
+      gradient: 'bg-gradient-wex'
+    }
+  ];
+
+  const teamMembers = [
+    {
+      name: 'Lucas Araújo',
+      token: lucasToken,
+      descriptionKey: 'about.lucasDescription',
+      stacks: ['Python', 'Django', 'TypeScript', 'Machine Learning'],
+      gradient: 'bg-gradient-wex'
+    },
+    {
+      name: 'Pedro Felipe Rolim',
+      token: pedroToken,
+      descriptionKey: 'about.pedroDescription',
+      stacks: ['Java SE/EE/ME', 'Spring Boot', 'JavaScript', 'Android'],
+      gradient: 'bg-gradient-quas'
+    }
+  ];
+
   return (
-    <section className="min-h-screen py-20 px-4 md:px-8 bg-gradient-to-b from-background to-card">
+    <section id="about" className="min-h-screen py-20 px-4 md:px-8 bg-gradient-to-b from-background to-card">
       <div className="max-w-6xl mx-auto">
         
         {/* Section Title */}
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-bold gradient-text mb-6">
-            Quem Somos / Who We Are
+            {t('about.title')}
           </h2>
           <div className="w-24 h-1 bg-gradient-mystical mx-auto rounded-full"></div>
         </div>
@@ -81,15 +72,12 @@ export const AboutSection = () => {
                       </div>
                     </div>
                     <CardTitle className="text-3xl md:text-4xl font-bold text-center">
-                      {card.title}
+                      {t(card.titleKey)}
                     </CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-4">
+                  <CardContent>
                     <p className="text-lg md:text-xl text-center leading-relaxed">
-                      {card.content.pt}
-                    </p>
-                    <p className="text-md md:text-lg text-muted-foreground text-center leading-relaxed">
-                      {card.content.en}
+                      {t(card.contentKey)}
                     </p>
                   </CardContent>
                 </div>
@@ -101,7 +89,7 @@ export const AboutSection = () => {
         {/* Team Section */}
         <div className="text-center mb-12">
           <h3 className="text-4xl md:text-5xl font-bold gradient-text mb-6">
-            Nosso Time / Our Team
+            {t('about.teamTitle')}
           </h3>
           <div className="w-20 h-1 bg-gradient-mystical mx-auto rounded-full"></div>
         </div>
@@ -130,10 +118,7 @@ export const AboutSection = () => {
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <p className="text-center leading-relaxed">
-                    {member.description.pt}
-                  </p>
-                  <p className="text-muted-foreground text-center text-sm leading-relaxed">
-                    {member.description.en}
+                    {t(member.descriptionKey)}
                   </p>
                   
                   <div className="flex flex-wrap gap-2 justify-center">

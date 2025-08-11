@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
-import invokerLogo from '/lovable-uploads/c49f4370-49e4-46ff-8d59-13be0f72224a.png';
+import invokerLogo from '@/assets/invokertech-logo.png';
 
 export const HeroSection = () => {
+  const { t, i18n } = useTranslation();
   const [scrollY, setScrollY] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [language, setLanguage] = useState('BR');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,9 +24,20 @@ export const HeroSection = () => {
     <>
       {/* Top Navigation Bar */}
       <div className={`fixed top-0 left-0 right-0 z-40 transition-all duration-700 ${isScrolled ? 'opacity-100 h-20 bg-background/80 backdrop-blur-lg border-b border-border/50' : 'opacity-0 h-0'}`}>
-        <div className="h-full flex items-center px-8">
+        <div className="h-full flex items-center justify-between px-8">
           {/* Space for logo */}
           <div className="w-16 h-16"></div>
+          <nav className="flex gap-4">
+            <Button variant="ghost" className="!text-quas hover:bg-white" onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}>
+              {t('nav.about')}
+            </Button>
+            <Button variant="ghost" className="!text-wex hover:bg-white" onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
+              {t('nav.services')}
+            </Button>
+            <Button variant="ghost" className="!text-exort hover:bg-white" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+              {t('nav.contact')}
+            </Button>
+          </nav>
         </div>
       </div>
 
@@ -33,17 +45,17 @@ export const HeroSection = () => {
       <div className={`fixed top-8 right-8 z-50 transition-all duration-500 ${isScrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
         <div className="flex gap-3">
           <Button
-            variant={language === 'BR' ? 'default' : 'outline'}
+            variant={i18n.language === 'pt' ? 'default' : 'outline'}
             size="sm"
-            onClick={() => setLanguage('BR')}
+            onClick={() => i18n.changeLanguage('pt')}
             className="w-12 h-10 p-0 text-2xl"
           >
             🇧🇷
           </Button>
           <Button
-            variant={language === 'GB' ? 'default' : 'outline'}
+            variant={i18n.language === 'en' ? 'default' : 'outline'}
             size="sm"
-            onClick={() => setLanguage('GB')}
+            onClick={() => i18n.changeLanguage('en')}
             className="w-12 h-10 p-0 text-2xl"
           >
             🇬🇧
@@ -75,7 +87,7 @@ export const HeroSection = () => {
             <img 
               src={invokerLogo} 
               alt="InvokerTech Logo" 
-              className={`${isScrolled ? 'w-16 h-16' : 'w-64 h-64'} rounded-full magic-glow transition-all duration-700 ${!isScrolled ? 'animate-pulse-glow' : ''}`} 
+              className={`${isScrolled ? 'w-16 h-16' : 'w-[75vw] max-w-64 aspect-square'} rounded-full magic-glow transition-all duration-700 ${!isScrolled ? 'animate-pulse-glow' : ''}`} 
             />
             <div className="absolute inset-0 rounded-full bg-gradient-mystical opacity-30"></div>
           </div>
@@ -83,7 +95,7 @@ export const HeroSection = () => {
 
         {/* Hero Content */}
         <div className={`text-center space-y-8 transition-all duration-700 ${isScrolled ? 'opacity-0 transform translate-y-10' : 'opacity-100'}`} style={{
-        marginTop: '320px'
+        marginTop: '400px'
       }}>
           
           {/* Company Name */}
@@ -96,18 +108,8 @@ export const HeroSection = () => {
           animationDelay: '0.3s'
         }}>
             <p className="text-2xl md:text-3xl text-quas font-medium">
-              {language === 'BR' ? 'Trazendo uma nova era de tecnologia' : 'Bringing a new age of technology'}
+              {t('hero.tagline')}
             </p>
-            {language === 'BR' && (
-              <p className="text-xl md:text-2xl text-muted-foreground">
-                Bringing a new age of technology
-              </p>
-            )}
-            {language === 'GB' && (
-              <p className="text-xl md:text-2xl text-muted-foreground">
-                Trazendo uma nova era de tecnologia
-              </p>
-            )}
           </div>
 
           {/* CTA Button */}
@@ -120,7 +122,7 @@ export const HeroSection = () => {
               behavior: 'smooth'
             });
            }}>
-             {language === 'BR' ? 'Fale Conosco' : 'Contact Us'}
+             {t('hero.ctaButton')}
            </Button>
           </div>
         </div>

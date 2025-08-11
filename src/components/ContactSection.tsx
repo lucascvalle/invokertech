@@ -1,8 +1,11 @@
+import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Mail, MessageCircle, Phone } from 'lucide-react';
 
 export const ContactSection = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="contact" className="min-h-screen py-20 px-4 md:px-8 bg-gradient-to-b from-background to-card">
       <div className="max-w-4xl mx-auto">
@@ -10,7 +13,7 @@ export const ContactSection = () => {
         {/* Section Title */}
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-bold gradient-text mb-6">
-            Fale Conosco / Contact Us
+            {t('contact.title')}
           </h2>
           <div className="w-24 h-1 bg-gradient-mystical mx-auto rounded-full"></div>
         </div>
@@ -20,13 +23,10 @@ export const ContactSection = () => {
           <div className="bg-card rounded-lg p-8">
             <CardHeader className="text-center pb-8">
               <CardTitle className="text-3xl md:text-4xl font-bold mb-4">
-                Vamos Conversar / Let's Talk
+                {t('contact.subtitle')}
               </CardTitle>
               <p className="text-lg text-muted-foreground">
-                Transforme suas ideias em realidade. Entre em contato para discutirmos seu próximo projeto.
-              </p>
-              <p className="text-md text-muted-foreground">
-                Transform your ideas into reality. Get in touch to discuss your next project.
+                {t('contact.description')}
               </p>
             </CardHeader>
             
@@ -41,7 +41,7 @@ export const ContactSection = () => {
                   </div>
                   <h3 className="font-semibold text-quas">Email</h3>
                   <p className="text-sm text-muted-foreground">
-                    contato@invokertech.dev
+                    lucascvalle@outlook.com
                   </p>
                 </div>
 
@@ -51,9 +51,9 @@ export const ContactSection = () => {
                       <MessageCircle className="w-6 h-6 text-background" />
                     </div>
                   </div>
-                  <h3 className="font-semibold text-wex">WhatsApp</h3>
+                  <h3 className="font-semibold text-wex">WhatsApp (Portugal)</h3>
                   <p className="text-sm text-muted-foreground">
-                    +55 (11) 99999-9999
+                    +351 968 949 704
                   </p>
                 </div>
 
@@ -63,9 +63,9 @@ export const ContactSection = () => {
                       <Phone className="w-6 h-6 text-background" />
                     </div>
                   </div>
-                  <h3 className="font-semibold text-exort">Telefone</h3>
+                  <h3 className="font-semibold text-exort">{t('contact.phone')} (Brasil)</h3>
                   <p className="text-sm text-muted-foreground">
-                    +55 (11) 3333-3333
+                    +55 (85) 99708-4202
                   </p>
                 </div>
               </div>
@@ -75,16 +75,16 @@ export const ContactSection = () => {
                 <Button 
                   size="lg"
                   className="bg-gradient-quas hover:bg-gradient-wex text-background font-bold px-8 py-6 rounded-full transition-all duration-300 hover:scale-105 quas-glow"
-                  onClick={() => window.open('mailto:contato@invokertech.dev', '_blank')}
+                  onClick={() => window.open('mailto:lucascvalle@outlook.com', '_blank')}
                 >
-                  Enviar Email / Send Email
+                  {t('contact.emailButton')}
                 </Button>
                 
                 <Button 
                   size="lg"
                   variant="outline"
                   className="border-2 border-exort text-exort hover:bg-exort hover:text-background font-bold px-8 py-6 rounded-full transition-all duration-300 hover:scale-105 exort-glow"
-                  onClick={() => window.open('https://wa.me/5511999999999', '_blank')}
+                  onClick={() => window.open('https://wa.me/351968949704', '_blank')}
                 >
                   WhatsApp
                 </Button>
@@ -93,13 +93,13 @@ export const ContactSection = () => {
               {/* Additional Info */}
               <div className="text-center pt-8 space-y-4">
                 <p className="text-lg font-medium gradient-text">
-                  Horário de Atendimento / Business Hours
+                  {t('contact.businessHours')}
                 </p>
                 <p className="text-muted-foreground">
-                  Segunda a Sexta: 9h às 18h (GMT-3) / Monday to Friday: 9am to 6pm (GMT-3)
+                  {t('contact.businessHoursDetails')}
                 </p>
                 <p className="text-muted-foreground">
-                  Resposta em até 24 horas / Response within 24 hours
+                  {t('contact.response_time')}
                 </p>
               </div>
             </CardContent>

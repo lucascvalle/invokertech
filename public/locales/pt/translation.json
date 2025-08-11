@@ -1,0 +1,47 @@
+{
+  "hero": {
+    "tagline": "Trazendo uma nova era de tecnologia",
+    "ctaButton": "Fale Conosco"
+  },
+  "nav": {
+    "about": "Quem somos",
+    "services": "Nossos Serviços",
+    "contact": "Fale Conosco"
+  },
+  "about": {
+    "title": "Quem Somos",
+    "originTitle": "Origem",
+    "originContent": "A Invoker Tech nasceu de uma amizade de 15 anos e de uma paixão compartilhada por tecnologia. Nossa missão é transformar ideias em soluções que reinventam processos, eliminam desperdícios e entregam resultados reais.",
+    "missionTitle": "Missão",
+    "missionContent": "Criamos soluções tecnológicas sob medida que modernizam processos, reduzem retrabalho e maximizam recursos. Combinamos excelência técnica e criatividade para levar tecnologia de ponta de forma acessível, ajudando empresas a crescer com mais eficiência, inteligência e impacto.",
+    "teamTitle": "Nosso Time",
+    "lucasDescription": "Desenvolvedor Full-Stack especializado em soluções web modernas e arquiteturas escaláveis.",
+    "pedroDescription": "Especialista em Backend e IA, focado em automação e soluções inteligentes para empresas."
+  },
+  "services": {
+    "title": "Nossos Serviços",
+    "backendTitle": "Soluções Backend sob medida",
+    "backendDescription": "Desenvolvemos APIs robustas e escaláveis utilizando as melhores práticas de desenvolvimento.",
+    "mobileTitle": "Desenvolvimento Mobile Android",
+    "mobileDescription": "Criamos aplicativos nativos Android com integração perfeita a microserviços.",
+    "aiTitle": "Automação e Inteligência Artificial",
+    "aiDescription": "Implementamos soluções de IA para automatizar processos e extrair insights dos dados.",
+    "webTitle": "Integrações e Sistemas Web",
+    "webDescription": "Desenvolvemos portais, dashboards e sistemas de gestão de dados personalizados.",
+    "advantageTitle": "Nosso Diferencial",
+    "advantage1": "Entregas ágeis e personalizadas",
+    "advantage2": "Comunicação direta com os desenvolvedores",
+    "advantage3": "Uso de tecnologias modernas e escaláveis",
+    "advantage4": "Experiência combinada em múltiplas áreas (web, mobile, automação)"
+  },
+  "contact": {
+    "title": "Fale Conosco",
+    "subtitle": "Vamos Conversar",
+    "description": "Transforme suas ideias em realidade. Entre em contato para discutirmos seu próximo projeto.",
+    "phone": "Telefone",
+    "emailButton": "Enviar Email",
+    "businessHours": "Horário de Atendimento",
+    "businessHoursDetails": "Segunda a Sexta: 9h às 18h (GMT-3)",
+    "response_time": "Resposta em até 24 horas"
+  }
+}

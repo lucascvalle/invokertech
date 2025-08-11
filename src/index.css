@@ -13,13 +13,13 @@ All colors MUST be HSL.
     --quas-light: 195 100% 70%;
     --quas-dark: 195 100% 30%;
     
-    --wex: 40 100% 55%;
-    --wex-light: 40 100% 70%;
-    --wex-dark: 40 100% 35%;
+    --exort: 40 100% 55%;
+    --exort-light: 40 100% 70%;
+    --exort-dark: 40 100% 35%;
     
-    --exort: 315 85% 65%;
-    --exort-light: 315 85% 80%;
-    --exort-dark: 315 85% 45%;
+    --wex: 315 85% 65%;
+    --wex-light: 315 85% 80%;
+    --wex-dark: 315 85% 45%;
 
     /* Semantic Colors */
     --background: 220 15% 8%;

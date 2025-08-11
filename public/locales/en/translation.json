@@ -1,0 +1,47 @@
+{
+  "hero": {
+    "tagline": "Bringing a new age of technology",
+    "ctaButton": "Contact Us"
+  },
+  "nav": {
+    "about": "Who We Are",
+    "services": "Our Services",
+    "contact": "Contact Us"
+  },
+  "about": {
+    "title": "Who We Are",
+    "originTitle": "Origin",
+    "originContent": "Born from a 15-year friendship and a shared passion for technology, Invoker Tech exists to make the digital world smarter, faster, and more accessible. We turn ideas into solutions that reinvent processes, cut waste, and deliver real results.",
+    "missionTitle": "Mission",
+    "missionContent": "We build innovative, custom tech solutions that modernize workflows, reduce rework, and maximize resources. By blending technical excellence with creativity, we make cutting-edge technology accessible—helping businesses grow with greater efficiency, intelligence, and impact.",
+    "teamTitle": "Our Team",
+    "lucasDescription": "Full-Stack Developer specialized in modern web solutions and scalable architectures.",
+    "pedroDescription": "Backend and Mobile Specialist, focused on automation and intelligent solutions for businesses."
+  },
+  "services": {
+    "title": "Our Services",
+    "backendTitle": "Custom Backend Solutions",
+    "backendDescription": "We develop robust and scalable APIs using the best development practices.",
+    "mobileTitle": "Android Mobile Development",
+    "mobileDescription": "We create native Android applications with seamless microservices integration.",
+    "aiTitle": "Automation and Artificial Intelligence",
+    "aiDescription": "We implement AI solutions to automate processes and extract insights from data.",
+    "webTitle": "Integrations and Web Systems",
+    "webDescription": "We develop custom portals, dashboards and data management systems.",
+    "advantageTitle": "Our Advantage",
+    "advantage1": "Agile and personalized deliveries",
+    "advantage2": "Direct communication with developers",
+    "advantage3": "Use of modern and scalable technologies",
+    "advantage4": "Combined experience in multiple areas (web, mobile, automation)"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Let's Talk",
+    "description": "Transform your ideas into reality. Get in touch to discuss your next project.",
+    "phone": "Phone",
+    "emailButton": "Send Email",
+    "businessHours": "Business Hours",
+    "businessHoursDetails": "Monday to Friday: 9am to 6pm (GMT+1)",
+    "response_time": "Response within 24 hours"
+  }
+}
