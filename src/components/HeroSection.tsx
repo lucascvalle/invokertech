@@ -27,7 +27,7 @@ export const HeroSection = () => {
         <div className="h-full flex items-center justify-between px-8">
           {/* Space for logo */}
           <div className="w-16 h-16"></div>
-          <nav className="flex gap-4">
+          <nav className="flex gap-1">
             <Button variant="ghost" className="!text-quas hover:bg-white" onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}>
               {t('nav.about')}
             </Button>
