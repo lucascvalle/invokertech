@@ -14,3 +14,5 @@ npm run dev
 ## Deployment
 
 This project is deployed using Vercel.
+
+Check the link: https://invokertech.vercel.app/
